@@ -16,9 +16,19 @@
     		<div class="flip-back">Lets</div>
 	</div>	
 	<div id=deck class="sideBox">
-	<table><form name="mem"><input type="button" name="cnt" value="0:00"" ></form></div>
+	<!--<table><form name="mem"><input type="button" name="cnt" value="0:00" onclick="begin()" ></form></div>
+	-->
 		
 	</div>
+
+	</script>
+	<audio id="cattalk">
+  		<source src="{{ url_for('static', filename='catmeow.ogg') }}" type="audio/ogg">
+  		<source src="{{ url_for('static', filename='catmeow.mp3') }}" type="audio/mpeg">
+		<source src="{{ url_for('static', filename='catmeow.wav') }}" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+ </body>
   </body>
 </html>
 

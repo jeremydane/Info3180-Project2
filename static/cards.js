@@ -111,7 +111,6 @@ window.onload=function()
 		}
 		
 		alert("24 Moves");
-		//document.write('<\/table><form name="mem"><input type="button" name="cnt" value="0:00" onclick="begin()" \/><\/form><\/div>');
 
 	}
 	var gameScreen = function()
@@ -119,13 +118,38 @@ window.onload=function()
 		var go= document.getElementById('go');
 		go.className = "";
 		go.parentNode.removeChild(go);
+
+		
 	}
-	
+
+	var cardHover = function(deck)
+	{
+		var pairs= 2*deck;
+		for (k = 0; k < pairs.length; k++)
+		{
+			img=document.getElementById(k);
+		  	
+			img.onmouseover=function()
+			{
+				var meow=document.getElementById('cattalk');
+				meow.play();
+			};
+
+			img.onmouseout=function()
+			{
+				var meow=document.getElementById('cattalk');
+				meow.pause();
+			};
+		}	
+	}
 
 	var deck = createDeck();
+
+	//var pos=localStorage.getItem('catpos');
+	cardHover(deck);
 	showDeck(deck);
 	document.getElementById('start').onclick=startGame;
 	
-	
+	 
 }
 

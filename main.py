@@ -17,4 +17,7 @@ app = Flask(__name__.split('.')[0])
 def hello(name=None):
   return render_template('cards.html', name=name)
 
-
+@app.errorhandler(404)
+def page_not_found(e):
+    """Return a custom 404 error."""
+    return 'Sorry, Nothing at this URL.', 404

@@ -68,9 +68,10 @@ body
 
 .back 
 { 
-	background:red;
+	background: url('JDF.png');
+	background-size: 150% 150%;
 	width: 80px;
-	height: 105px;
+	height: 106px;
 	margin: 4px;
  	border-color: black;
   	text-align: center;

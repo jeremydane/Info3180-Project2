@@ -5,7 +5,14 @@
 	<script src="{{ url_for('static', filename='cards.js') }}"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cards.css') }}" />
 	<img src="{{ url_for('static', filename='JDF.png') }}" alt="JDF" width="104" height="128">
-	<p><h1>This is the Card Game</h1></p>
+	</script>
+	<audio id="cattalk">
+  		<source src="{{ url_for('static', filename='catmeow.ogg') }}" type="audio/ogg">
+  		<source src="{{ url_for('static', filename='catmeow.mp3') }}" type="audio/mpeg">
+		<source src="{{ url_for('static', filename='catmeow.wav') }}" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	<p><h1>A Card Game</h1></p>
 	
 	<div id="start">			
 		<div class="start">S T A R T</div>			
@@ -20,6 +27,9 @@
 	-->
 		
 	</div>
+
+	
+ </body>
   </body>
 </html>
 
